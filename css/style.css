@@ -17,7 +17,7 @@ body {
     margin: 0 auto;
     color: rgb(34 34 34);
     font-family: 'Urbanist', sans-serif;
-    font-size: 85.75%;
+    font-size: 1.1em;
 }
 
 h1 {
@@ -131,6 +131,16 @@ img {
 
 
     }
+}
+
+.col2 {
+    columns: 2;
+    column-gap: 5em;
+}
+
+.col2 .card {
+    margin-bottom: 2em;
+    overflow: hidden;
 }
 
 
