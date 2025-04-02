@@ -1,0 +1,177 @@
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+}
+
+body {
+    margin: 0 auto;
+    color: rgb(34 34 34);
+    font-family: 'Urbanist', sans-serif;
+    font-size: 85.75%;
+}
+
+h1 {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 100px;
+}
+
+h2 {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 64px;
+}
+
+h3 {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 50px;
+}
+
+h4 {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 36px;
+}
+
+.display-italic {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.sub-h1 {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.sub-h2 {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+}
+
+
+/* RESPONSIVE IMG */
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+
+/* CONTAINER */
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* FLEX GRID */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row.swapped {
+    flex-direction: row-reverse;
+}
+
+.row>.column {
+    flex-grow: 1;
+    width: 98%;
+    margin: 1%;
+    flex-shrink: 0;
+
+    @media (min-width: 768px) {
+        &.centered {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            flex-grow: 0;
+        }
+
+        &.one-half {
+            width: 48%;
+        }
+
+        &.one-third {
+            width: 31.3333%;
+        }
+
+        &.two-thirds {
+            width: 64.6666%;
+        }
+
+        &.one-fourth {
+            width: 23%;
+        }
+
+        &.one-fifth {
+            width: 18%;
+        }
+
+
+    }
+}
+
+
+/* LOGO */
+
+
+/* HEADER */
+
+.nav-item a {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.home-tagline {
+    font-weight: 400;
+    font-size: 35px;
+}
+
+
+/* HERO */
+
+.hero {
+    text-align: center;
+}
+
+/* PROJECTS */
+
+.professional {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.card-title {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+}
+
+/* FOOTER */
+
+.nav-title {
+    font-weight: 600;
+    font-size: 30px;
+}
