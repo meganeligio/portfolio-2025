@@ -13,6 +13,7 @@ body {
     margin: 0 auto;
     color: rgb(34 34 34);
     font-family: 'Urbanist', sans-serif;
+    /* font-weight: 200; */
     font-size: 1.1em;
     background: linear-gradient(180deg, rgba(243 202 189 / 1) 20%, rgba(241 252 232 / 1) 30%);
 }
@@ -195,11 +196,13 @@ header {
     border: 2px solid rgb(34 34 34);
     color: rgb(34 34 34);
     background: none;
+    padding: 0.8em 1em 0.8em 1em;
 }
 
 .btn:hover {
     border: 2px solid rgb(76 90 68);
     color: rgb(76 90 68);
+    font-weight: 600;
     background: rgb(241 252 232);
 }
 
@@ -290,6 +293,11 @@ footer li {
 }
 
 @media screen and (min-width: 768px) {
+    .nav-pages li {
+        margin-bottom: 1em;
+        margin-left: 3.5em;
+    }
+
     .legal .legal-links {
         margin-left: auto;
     }
@@ -346,11 +354,11 @@ footer li {
 }
 
 .scroll-down-dude:before {
-	animation: down-arrow-before 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+	animation: down-arrow-before 1.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
 }
 
 .scroll-down-dude:after {
-	animation: down-arrow-after 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+	animation: down-arrow-after 1.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
 }
 
 @keyframes down-arrow-before {
