@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 
+/* BASE */
+
 *,
 *::before,
 *::after {
@@ -13,9 +15,27 @@ body {
     margin: 0 auto;
     color: rgb(34 34 34);
     font-family: 'Urbanist', sans-serif;
-    /* font-weight: 200; */
     font-size: 1.1em;
-    background: linear-gradient(180deg, rgba(243 202 189 / 1) 20%, rgba(241 252 232 / 1) 30%);
+    /* background: linear-gradient(180deg, rgba(243 202 189 / 1) 20%, rgba(241 252 232 / 1) 30%); */
+    
+    background: linear-gradient(90deg, rgb(241 252 232) 25%, rgb(243 202 189) 50%, rgb(241 252 232) 75%, rgb(243 202 189) 100%);
+    background-size:  400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+
+/* GRADIENT BG (codepen creds: Colt Steele) */
+
+@keyframes gradient {
+    0% {
+      background-position: 0%;
+    }
+    50% {
+      background-position: 100%;
+    }
+    100% {
+      background-position: 0%;
+    }
 }
 
 h1 {
@@ -148,12 +168,82 @@ header {
 
 .nav-item a {
     font-weight: 600;
-    /* border: 1px solid red; */
 }
 
 .home-tagline {
     font-weight: 400;
     font-size: 35px;
+}
+
+
+/* DROP DOWN MENU (codepen creds: @Mark_Bell00 */
+
+.dropdown {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    nav {
+        &.primary-navigation {
+        
+            ul li {
+                list-style: none;
+                padding: 0 10px 15px 20px;
+                position: relative;
+                text-decoration: none;
+            }
+        
+            li a:hover {
+                color: rgb(76 90 68);
+            }
+        
+            ul li ul {
+                visibility: hidden;
+                position: absolute;
+                display: none;
+                /* background: rgb(241 252 232 / .6); */
+                border-radius: 5px;
+                border: 1.5px solid rgb(76 90 68);
+            }
+        
+            ul li:hover > ul,
+            ul li ul:hover {
+                visibility: visible;
+                opacity: 1;
+                display: block;
+                min-width: 250px;
+                text-align: left;
+                padding-top: 20px;
+            }
+
+            ul li ul li a::before {
+                display: none;
+            }
+        
+            ul li ul li {
+                clear: both;
+                width: 100%;
+                text-align: left;
+                margin-bottom: 10px;
+                border-style: none;
+            }
+
+            ul li ul li a {
+                color: rgb(76 90 68);
+            }
+        
+            ul li ul li a:hover {
+                padding-left: 10px;
+                border-left: 2px solid rgb(76 90 68);
+                transition: all 0.3s ease;
+            }
+        }
+    }
+    
+    ul li ul li a {
+        transition: all 0.5s ease;
+    }
+
 }
 
 
@@ -241,6 +331,10 @@ footer li {
     line-height: 2em;
 }
 
+footer a:hover {
+    color: rgb(241 252 232);
+}
+
 .social-nav ul {
     display: flex;
     margin-top: 60px;
@@ -255,6 +349,10 @@ footer li {
     color: rgb(76 90 68);
 }
 
+.icons li a:hover {
+    color: rgb(241 252 232);
+}
+
 .nav-pages li {
     margin-bottom: 1em;
 }
@@ -266,7 +364,7 @@ footer li {
 }
 
 .selected a {
-    border-bottom: 2px solid rgb(34 34 34);
+    color: rgb(241 252 232);
 }
 
 .nav-title {
@@ -286,7 +384,7 @@ footer li {
     color: rgb(255 255 255);
 }
 
-.legal {
+.copyright {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -298,7 +396,7 @@ footer li {
         margin-left: 3.5em;
     }
 
-    .legal .legal-links {
+    .copyright {
         margin-left: auto;
     }
 }
@@ -322,20 +420,7 @@ footer li {
 }
 
 
-/* COLUMNS & ROWS*/
-
-/* .col2 {
-    columns: 2;
-    column-gap: 2em;
-}
-
-.col2 .card {
-    margin-bottom: 2em;
-    overflow: hidden;
-} */
-
-
-/* SCROLLBAR (codepen creds: Mike Wagz) */
+/* SCROLL ARROW (codepen creds: Mike Wagz) */
 
 .scroll-down-dude {
     margin: auto;
@@ -382,4 +467,40 @@ footer li {
 		transform: rotate(45deg) translate(-70%, -70%);
 		opacity: 1;
 	}
+}
+
+
+/* ANIMATED GRADIENT BORDER (codepen creds: Johnny Fekete) */
+
+.animated-box {
+    position: relative;
+}
+  
+.animated-box:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 4px;
+    background: linear-gradient(120deg, rgb(76 90 68), rgb(241 252 232), rgb(243 202 189));
+    background-size: 300% 300%;
+    clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), 3px calc(100% - 3px), 3px 100%, 100% 100%, 100% 0%, 0% 0%);
+}
+  
+.animated-box.in:after {
+    animation: frame-enter 1s forwards ease-in-out reverse, gradient-animation 4s ease-in-out infinite;
+}
+  
+@keyframes gradient-animation {
+    0% {
+      background-position: 15% 0%;
+    }
+    50% {
+      background-position: 85% 100%;
+    }
+    100% {
+      background-position: 15% 0%;
+    }
 }
