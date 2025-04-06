@@ -16,6 +16,7 @@ body {
     color: rgb(34 34 34);
     font-family: 'Urbanist', sans-serif;
     font-size: 1.1em;
+    cursor: url('/favicon/cursor/favicon.ico'), auto;
     /* background: linear-gradient(180deg, rgba(243 202 189 / 1) 20%, rgba(241 252 232 / 1) 30%); */
     
     background: linear-gradient(90deg, rgb(241 252 232) 25%, rgb(243 202 189) 50%, rgb(241 252 232) 75%, rgb(243 202 189) 100%);
@@ -85,6 +86,10 @@ h4 {
 
 a {
     text-decoration: none;
+}
+
+a:hover {
+    cursor: url('/favicon/hover/favicon.ico'), auto;
 }
 
 
