@@ -156,9 +156,6 @@ img {
 }
 
 
-/* LOGO */
-
-
 /* HEADER */
 
 header {
@@ -170,7 +167,7 @@ header {
     font-weight: 600;
 }
 
-.home-tagline {
+.hero-tagline {
     font-weight: 400;
     font-size: 35px;
 }
@@ -180,6 +177,7 @@ header {
 
 .dropdown {
     display: none;
+    /* z-index: 1000; */
 }
 
 @media (min-width: 768px) {
@@ -201,7 +199,7 @@ header {
                 visibility: hidden;
                 position: absolute;
                 display: none;
-                /* background: rgb(241 252 232 / .6); */
+                background: rgb(241 252 232 / .9);
                 border-radius: 5px;
                 border: 1.5px solid rgb(76 90 68);
             }
@@ -259,6 +257,58 @@ header {
     margin-bottom: 2em;
 }
 
+/* ABOUT */
+
+.about-hero {
+    height: 700px;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    place-content: center;
+    justify-content: center;
+    margin-bottom: 15em;
+    margin-top: 8em;
+}
+
+.about-hero h2 {
+    text-align: left;
+    font-weight: 700;
+}
+
+.about-hero p {
+    max-width: 700px;
+    text-align: left;
+    font-size: 25px;
+}
+
+.about-info {
+    max-width: 700px;
+}
+
+.goals-heading  {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    margin-top: 1em;
+}
+
+.about-info .row {
+    margin-top: 5em;
+}
+
+@media (min-width: 768px) {
+    .about-hero {
+        height: 700px;
+        display: grid;
+        text-align: center;
+        align-items: center;
+        place-content: center;
+        justify-content: center;
+        margin-bottom: 2em;
+        margin-top: 0;
+    }
+}
+
 
 /* PROJECTS */
 
@@ -300,6 +350,100 @@ header {
     .student h3 {
         text-align: center;
         margin-top: 3em;
+    }
+}
+
+
+/* GALLERY */
+
+.gallery-h1 {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.wrapper {
+    width: 60%;
+    margin: 60px auto;
+}
+
+.gallery-img {
+    max-width: none;
+    height: none;
+}
+
+div.gallery {
+    margin-top: 30px;
+}
+
+div.gallery ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: center;
+}
+
+/* animation */
+div.gallery ul li,
+div.gallery li img {
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+div.gallery ul li {
+    position: relative;
+    float: left;
+    width: 130px;
+    height: 130px;
+    margin: 5px;
+    padding: 5px;
+    z-index: 0;
+}
+
+/* Make sure z-index is higher on hover */
+/* Ensure that hover image overlapped the others */
+div.gallery ul li:hover {
+    z-index: 5;
+}
+
+/* Image is position nicely under li */
+div.gallery ul li img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / .2);
+    padding: 5px;
+    width: 130px;
+    height: 130px;
+    background: rgb(255 255 255);
+}
+
+div.gallery ul li img:hover {
+    width: 200px;
+    height: 200px;
+    margin-top: -130px;
+    margin-left: -130px;
+    top: 65%;
+    left: 65%;
+}
+
+@media only screen and (min-width: 499px) and (max-width: 1212px) {
+    .wrapper {
+        width: 500px;
+    }
+}
+
+@media only screen and (max-width: 498px) {
+    .wrapper {
+        width: 300px;
+    }
+
+    div.gallery ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
     }
 }
 
@@ -396,12 +540,6 @@ footer a:hover {
         margin-left: 3.5em;
     }
 
-    .copyright {
-        margin-left: auto;
-    }
-}
-
-@media screen and (min-width: 768px) {
     .site-footer-nav>* {
         flex: 1;
     }
@@ -416,6 +554,14 @@ footer a:hover {
 
     .site-footer-nav {
         flex: 2 0px;
+    }
+
+    .footer-wave-svg {
+        height: 50px;
+    }
+
+    .copyright {
+        margin-left: auto;
     }
 }
 
