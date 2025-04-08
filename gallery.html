@@ -109,101 +109,133 @@
 
                     <div class="gallery-img-wrapper">
 
-                        <img src="img/mafuyu.jpg">
+                        <img src="artworks/cat-chilling.jpg" alt="" width="400" height="400" />
 
                     </div>
-
+                
                 </div>
 
                 <div class="gallery-img">
 
                     <div class="gallery-img-wrapper">
 
-                        <img src="img/mafuyu.jpg">
+                        <img src="artworks/krobie-juminos.jpg" alt="" width="400" height="400" />
 
                     </div>
-
+                
                 </div>
 
                 <div class="gallery-img">
 
                     <div class="gallery-img-wrapper">
 
-                        <img src="img/mafuyu.jpg">
+                        <img src="artworks/noya-crowhina.jpg" alt="" width="400" height="400" />
 
                     </div>
-
+                
                 </div>
 
                 <div class="gallery-img">
 
                     <div class="gallery-img-wrapper">
 
-                        <img src="img/mafuyu.jpg">
+                        <img src="artworks/redcarnations-chars.jpg" alt="" width="400" height="400" />
 
                     </div>
-
+                
                 </div>
 
                 <div class="gallery-img">
 
                     <div class="gallery-img-wrapper">
 
-                        <img src="img/mafuyu.jpg">
+                        <img src="artworks/noyakuma.jpg" alt="" width="400" height="400" />
 
                     </div>
-
+                
                 </div>
 
                 <div class="gallery-img">
 
                     <div class="gallery-img-wrapper">
 
-                        <img src="img/mafuyu.jpg">
+                        <img src="artworks/kyanma.jpg" alt="" width="400" height="400" />
 
                     </div>
-
+                
                 </div>
 
             </div>
 
         </section>
 
-        <!-- <div class="wrapper">
+        <!-- <section class="gallery">
 
-            <div class="gallery">
+            <div class="gallery-track">
 
-                <ul>
+                <div class="gallery-img">
 
-                    <li>
+                    <div class="gallery-img-wrapper">
 
-                        <img class="gallery-img" src="https://placehold.co/400" alt="" width="400" height="400" />
+                        <img src="img/mafuyu.jpg" alt="" width="400" height="400">
 
-                    </li>
+                    </div>
 
-                    <li>
+                </div>
 
-                        <img class="gallery-img" src="https://placehold.co/400" alt="" width="400" height="400" />
+                <div class="gallery-img">
 
-                    </li>
+                    <div class="gallery-img-wrapper">
 
-                    <li>
+                        <img src="img/mafuyu.jpg" alt="" width="400" height="400">
 
-                        <img class="gallery-img" src="https://placehold.co/400" alt="" width="400" height="400" />
+                    </div>
 
-                    </li>
+                </div>
 
-                    <li>
+                <div class="gallery-img">
 
-                        <img class="gallery-img" src="https://placehold.co/400" alt="" width="400" height="400" />
+                    <div class="gallery-img-wrapper">
 
-                    </li>
+                        <img src="img/mafuyu.jpg" alt="" width="400" height="400">
 
-                </ul>
+                    </div>
+
+                </div>
+
+                <div class="gallery-img">
+
+                    <div class="gallery-img-wrapper">
+
+                        <img src="img/mafuyu.jpg" alt="" width="400" height="400">
+
+                    </div>
+
+                </div>
+
+                <div class="gallery-img">
+
+                    <div class="gallery-img-wrapper">
+
+                        <img src="img/mafuyu.jpg" alt="" width="400" height="400">
+
+                    </div>
+
+                </div>
+
+                <div class="gallery-img">
+
+                    <div class="gallery-img-wrapper">
+
+                        <img src="img/mafuyu.jpg" alt="" width="400" height="400">
+
+                    </div>
+
+                </div>
 
             </div>
 
-        </div> -->
+        </section> -->
 
     </main>
 
@@ -318,39 +350,84 @@
         const lerp = (start,end,t) => start * (1-t) + end * t;
 
         function updateScroll() {
-        startY = lerp(startY,endY,easing);
-        gallery.style.height = `${track.clientHeight}px`;
-        track.style.transform = `translateY(-${startY}px)`;
-        activateParallax();
-        raf = requestAnimationFrame(updateScroll);
-        if (startY.toFixed(1) === window.scrollY.toFixed(1)) cancelAnimationFrame(raf);
+            startY = lerp(startY,endY,easing);
+            gallery.style.height = `${track.clientHeight}px`;
+            track.style.transform = `translateY(-${startY}px)`;
+            activateParallax();
+            raf = requestAnimationFrame(updateScroll);
+            if (startY.toFixed(1) === window.scrollY.toFixed(1)) cancelAnimationFrame(raf);
         }
 
         function startScroll() {
-        endY = window.scrollY; 
-        cancelAnimationFrame(raf);
-        raf = requestAnimationFrame(updateScroll);
+            endY = window.scrollY; 
+            cancelAnimationFrame(raf);
+            raf = requestAnimationFrame(updateScroll);
         }
 
         function parallax(card) {
-        const wrapper = card.querySelector('.gallery-img-wrapper');
-        const diff = card.offsetHeight - wrapper.offsetHeight;
-        const {top} = card.getBoundingClientRect();
-        const progress = top / window.innerHeight;
-        const yPos = diff * progress;
-        wrapper.style.transform = `translateY(${yPos}px)`;
+            const wrapper = card.querySelector('.gallery-img-wrapper');
+            const diff = card.offsetHeight - wrapper.offsetHeight;
+            const {top} = card.getBoundingClientRect();
+            const progress = top / window.innerHeight;
+            const yPos = diff * progress;
+            wrapper.style.transform = `translateY(${yPos}px)`;
         }
 
         const activateParallax = () => cards.forEach(parallax);
 
         function init() {
-        activateParallax();
-        startScroll();
+            activateParallax();
+            startScroll();
         }
 
         window.addEventListener('load',updateScroll,false);
         window.addEventListener('scroll',init,false);
         window.addEventListener('resize',updateScroll,false);
+
+        // const gallery = document.querySelector('.gallery');
+        // const track = document.querySelector('.gallery-track');
+        // const cards = document.querySelectorAll('.gallery-img');
+        // const easing = 0.05;
+        // let startY = 0;
+        // let endY = 0;
+        // let raf;
+
+        // const lerp = (start,end,t) => start * (1-t) + end * t;
+
+        // function updateScroll() {
+        // startY = lerp(startY,endY,easing);
+        // gallery.style.height = `${track.clientHeight}px`;
+        // track.style.transform = `translateY(-${startY}px)`;
+        // activateParallax();
+        // raf = requestAnimationFrame(updateScroll);
+        // if (startY.toFixed(1) === window.scrollY.toFixed(1)) cancelAnimationFrame(raf);
+        // }
+
+        // function startScroll() {
+        // endY = window.scrollY; 
+        // cancelAnimationFrame(raf);
+        // raf = requestAnimationFrame(updateScroll);
+        // }
+
+        // function parallax(card) {
+        // const wrapper = card.querySelector('.gallery-img-wrapper');
+        // const diff = card.offsetHeight - wrapper.offsetHeight;
+        // const {top} = card.getBoundingClientRect();
+        // const progress = top / window.innerHeight;
+        // const yPos = diff * progress;
+        // wrapper.style.transform = `translateY(${yPos}px)`;
+        // }
+
+        // const activateParallax = () => cards.forEach(parallax);
+
+        // function init() {
+        // activateParallax();
+        // startScroll();
+        // }
+
+        // window.addEventListener('load',updateScroll,false);
+        // window.addEventListener('scroll',init,false);
+        // window.addEventListener('resize',updateScroll,false);
     
     </script>
 
