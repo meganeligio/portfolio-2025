@@ -65,7 +65,7 @@
 
                                 <li><a href="#">Vision Dinner 2024</a></li>
 
-                                <li><a href="#">Idle Café</a></li>
+                                <li><a href="idlecafe/index.html">Idle Café</a></li>
 
                                 <li><a href="#">hello stickers</a></li>
 
@@ -89,9 +89,9 @@
   
     </header>
 
-    <main class="container">
+    <main>
 
-        <section class="hero">
+        <section class="container hero">
             
             <h1 class="gallery-h1">my artworks</h1>
 
@@ -101,7 +101,75 @@
 
         </section>
 
-        <div class="wrapper">
+        <section class="gallery">
+
+            <div class="gallery-track">
+
+                <div class="gallery-img">
+
+                    <div class="gallery-img-wrapper">
+
+                        <img src="img/mafuyu.jpg">
+
+                    </div>
+
+                </div>
+
+                <div class="gallery-img">
+
+                    <div class="gallery-img-wrapper">
+
+                        <img src="img/mafuyu.jpg">
+
+                    </div>
+
+                </div>
+
+                <div class="gallery-img">
+
+                    <div class="gallery-img-wrapper">
+
+                        <img src="img/mafuyu.jpg">
+
+                    </div>
+
+                </div>
+
+                <div class="gallery-img">
+
+                    <div class="gallery-img-wrapper">
+
+                        <img src="img/mafuyu.jpg">
+
+                    </div>
+
+                </div>
+
+                <div class="gallery-img">
+
+                    <div class="gallery-img-wrapper">
+
+                        <img src="img/mafuyu.jpg">
+
+                    </div>
+
+                </div>
+
+                <div class="gallery-img">
+
+                    <div class="gallery-img-wrapper">
+
+                        <img src="img/mafuyu.jpg">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- <div class="wrapper">
 
             <div class="gallery">
 
@@ -135,7 +203,7 @@
 
             </div>
 
-        </div>
+        </div> -->
 
     </main>
 
@@ -236,6 +304,55 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <script src="js/script.js"></script>
+
+    <script>
+
+        const gallery = document.querySelector('.gallery');
+        const track = document.querySelector('.gallery-track');
+        const cards = document.querySelectorAll('.gallery-img');
+        const easing = 0.05;
+        let startY = 0;
+        let endY = 0;
+        let raf;
+
+        const lerp = (start,end,t) => start * (1-t) + end * t;
+
+        function updateScroll() {
+        startY = lerp(startY,endY,easing);
+        gallery.style.height = `${track.clientHeight}px`;
+        track.style.transform = `translateY(-${startY}px)`;
+        activateParallax();
+        raf = requestAnimationFrame(updateScroll);
+        if (startY.toFixed(1) === window.scrollY.toFixed(1)) cancelAnimationFrame(raf);
+        }
+
+        function startScroll() {
+        endY = window.scrollY; 
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(updateScroll);
+        }
+
+        function parallax(card) {
+        const wrapper = card.querySelector('.gallery-img-wrapper');
+        const diff = card.offsetHeight - wrapper.offsetHeight;
+        const {top} = card.getBoundingClientRect();
+        const progress = top / window.innerHeight;
+        const yPos = diff * progress;
+        wrapper.style.transform = `translateY(${yPos}px)`;
+        }
+
+        const activateParallax = () => cards.forEach(parallax);
+
+        function init() {
+        activateParallax();
+        startScroll();
+        }
+
+        window.addEventListener('load',updateScroll,false);
+        window.addEventListener('scroll',init,false);
+        window.addEventListener('resize',updateScroll,false);
+    
+    </script>
 
 </body>
 
