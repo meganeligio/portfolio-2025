@@ -178,7 +178,6 @@ header {
     font-size: 35px;
 }
 
-
 /* DROP DOWN MENU (codepen creds: @Mark_Bell00 */
 
 .dropdown {
@@ -415,38 +414,6 @@ header {
 
 }
 
-/* .card-body {
-    background:rgb(163 191 141);
-}
-
-.card-title {
-    font-family: 'Urbanist', sans-serif;
-    font-weight: 600;
-    font-size: 24px;
-}
-
-.btn {
-    border: 2px solid rgb(34 34 34);
-    color: rgb(34 34 34);
-    background: none;
-    padding: 0.8em 1em 0.8em 1em;
-    margin-top: 1em;
-}
-
-.btn:hover {
-    border: 2px solid rgb(76 90 68);
-    color: rgb(76 90 68);
-    font-weight: 600;
-    background: rgb(241 252 232);
-}
-
-@media (min-width: 768px) {
-    .student h3 {
-        text-align: center;
-        margin-top: 3em;
-    }
-} */
-
 
 /* GALLERY (codepen creds: noirsociety */
 
@@ -454,69 +421,6 @@ header {
     font-style: italic;
     font-weight: 400;
 }
-
-/* .gallery-track {
-    position: fixed;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 0.25rem;
-    padding: 0.25rem;
-    will-change: transform;
-    margin: 0;
-} */
-
-/* .gallery-img-wrapper {
-    display: block;
-    width: 1400px;
-    height: 135%;
-    margin: 0 auto;
-    margin-left: auto;
-    margin-right: auto;
-    will-change: transform;
-    columns: 3;
-    border: 5px solid purple;
-} */
-
-/* .gallery-img {
-    height: 400px;
-    overflow: hidden;
-
-    & .gallery-img-wrapper {
-        width: 1200px;
-        height: 135%;
-        margin: 0 auto;
-        will-change: transform;
-        border: 5px solid purple;
-
-        & img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        }
-    }
-} */
-
-/* @media (min-width: 768px) {
-    .gallery-img-wrapper {
-        width: 1000px;
-        height: 135%;
-        margin: 0 auto;
-        will-change: transform;
-        border: 5px solid red;
-    }
-} */
-
-/* @media (width < 800px) {
-    .gallery-track {
-        grid-template-columns: repeat(2,1fr);
-    }
-}
-
-@media (width < 550px) {
-    .gallery-track {
-        grid-template-columns: repeat(1,1fr);
-    }
-} */
 
 
 /* FOOTER */
