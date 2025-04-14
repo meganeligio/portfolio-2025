@@ -26,21 +26,6 @@ body {
     counter-reset: item;
 }
 
-
-/* GRADIENT BG (codepen creds: Colt Steele) */
-
-@keyframes gradient {
-    0% {
-        background-position: 0%;
-    }
-    50% {
-        background-position: 100%;
-    }
-    100% {
-        background-position: 0%;
-    }
-}
-
 h1 {
     font-family: 'Fraunces', serif;
     font-style: italic;
@@ -96,6 +81,24 @@ a:hover {
 
 .text-centered {
     text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* GRADIENT BG (codepen creds: Colt Steele) */
+
+@keyframes gradient {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0%;
+    }
 }
 
 
@@ -212,6 +215,7 @@ header {
                 background: rgb(241 252 232 / .9);
                 border-radius: 5px;
                 border: 1.5px solid rgb(76 90 68);
+                z-index: 1;
             }
         
             ul li:hover > ul,
@@ -284,7 +288,7 @@ header {
 .about-hero h2 {
     text-align: left;
     font-weight: 700;
-    font-size: 50px;
+    font-size: 45px;
 }
 
 .about-hero p {
@@ -560,7 +564,6 @@ footer a:hover {
 
 .social-nav ul {
     display: flex;
-    margin-top: 60px;
 }
 
 .icons li {
@@ -613,6 +616,19 @@ footer a:hover {
     justify-content: center;
 }
 
+.desktop-h4 {
+    display: none;
+}
+
+.mobile-h4 {
+    margin-top: 50px;
+}
+
+.mobile-line {
+    margin-bottom: 30px;
+}
+
+
 @media screen and (min-width: 768px) {
     .nav-pages li {
         margin-bottom: 1em;
@@ -641,6 +657,23 @@ footer a:hover {
 
     .copyright {
         margin-left: auto;
+    }
+
+    .mobile-line {
+        display: none;
+    }
+
+    .mobile-h4 {
+        display: none;
+    }
+
+    .desktop-h4 {
+        display: inline;
+    }
+
+    .social-nav ul {
+        display: flex;
+        margin-top: 60px;
     }
 }
 
