@@ -589,8 +589,37 @@ footer a:hover {
     font-size: 20px;
 }
 
-.selected a {
+.nav-pages .selected a {
     color: rgb(241 252 232);
+}
+
+.footer-projects li {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: left;
+}
+
+.footer-projects li a {
+    color: rgb(34 34 34);
+}
+
+.footer-projects ul li {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.footer-projects ul li a {
+    color: rgb(34 34 34 / 0.6);
+}
+
+.footer-projects ul li a:hover {
+    color: rgb(34 34 34);
+}
+
+.footer-projects ul .selected a {
+    color: rgb(34 34 33);
 }
 
 .nav-title {
@@ -601,33 +630,42 @@ footer a:hover {
 
 .footer-tags li {
     display: inline-block;
-    max-width: 205px;
+    font-size: 14px;
     text-align: center;
-    background: rgb(76 90 68);
-    border-radius: 0.4em;
-    padding: 0.2em 2em;
+    background: rgb(76 90 68 / 0.3);
+    border: 1px solid rgb(76 90 68);
+    border-radius: 0.8em;
+    padding: 0.1em 1em;
     margin-bottom: 10px;
     color: rgb(255 255 255);
 }
 
-.copyright {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.footer-logo a {
+    display: none;
 }
 
 .desktop-h4 {
     display: none;
 }
 
-.mobile-h4 {
-    margin-top: 50px;
+.desktop-copyright {
+    display: none;
 }
 
 .mobile-line {
     margin-bottom: 30px;
 }
 
+.mobile-h4 {
+    margin-top: 50px;
+}
+
+.mobile-copyright {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 14px;
+}
 
 @media screen and (min-width: 768px) {
     .nav-pages li {
@@ -655,8 +693,36 @@ footer a:hover {
         height: 50px;
     }
 
-    .copyright {
+    .social-nav ul {
+        display: flex;
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+
+    .footer-projects li {
+        margin-bottom: 5px;
+        font-weight: 600;
+        font-size: 20px;
+        text-align: left;
+        margin-left: 70px;
+    }   
+
+    .footer-logo a {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }    
+
+    .desktop-h4 {
+        display: block;
+    }    
+
+    .desktop-copyright {
+        display: block;
         margin-left: auto;
+        font-size: 14px;
     }
 
     .mobile-line {
@@ -667,13 +733,8 @@ footer a:hover {
         display: none;
     }
 
-    .desktop-h4 {
-        display: inline;
-    }
-
-    .social-nav ul {
-        display: flex;
-        margin-top: 60px;
+    .mobile-copyright {
+        display: none;
     }
 }
 
