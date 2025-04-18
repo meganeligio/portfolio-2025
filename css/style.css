@@ -63,12 +63,20 @@ h4 {
     font-family: 'Urbanist', sans-serif;
     font-weight: 600;
     font-size: 28px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .sub-h2 {
     font-family: 'Urbanist', sans-serif;
     font-weight: 600;
     font-size: 26px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+p {
+    max-width: 650px;
 }
 
 a {
@@ -346,9 +354,100 @@ header {
     margin-bottom: 0;
 }
 
+.projects-info {
+    margin-top: 50px;
+}
+
 .projects-text {
     margin-top: 10px;
     font-size: 16px;
+}
+
+.projects-hero {
+    margin-top: 50px;
+    height: 215px;
+}
+
+.projects-subhead {
+    margin-bottom: 0;
+}
+
+.projects-tags {
+    list-style: none;
+    padding: 0;
+}
+
+.projects-tags li {
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    background: rgb(76 90 68 / 0.1);
+    border: 1px solid rgb(76 90 68);
+    border-radius: 0.8em;
+    padding: 0.1em 1em;
+    margin: 0 auto;
+    color: rgb(34 34 34);
+}
+
+.projects-sections {
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.line-down {
+    border: .6px solid rgb(34 34 34 / .3);
+    transform: rotate(90deg);
+    margin: 100px auto;
+    max-width: 100px;
+}
+
+.problem {
+    text-align: left;
+    place-items: center;
+}
+
+.solution {
+    text-align: left;
+    place-items: center;
+}
+
+.projects-sections h3 {
+    margin-bottom: 20px;
+}
+
+.hi-fi {
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+}
+
+.hi-fi a {
+    color: rgb(34 34 34);
+}
+
+.hi-fi a:hover {
+    text-decoration: underline;
+}
+
+.projects-pgs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.projects-pgs a {
+    color: rgb(76 90 68);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.next::after {
+    content: '\276F';
+    padding-left: 1em;
+}
+
+.previous::before {
+    content: '\276E';
+    padding-right: 1em;
 }
 
 /* HOVER TEXT (codepen creds: badalsaibo) */
@@ -373,7 +472,7 @@ header {
 }
 
 .projects-box a {
-    color: white;
+    color: rgb(255 255 255);
 }
 
 .caption {
@@ -420,12 +519,45 @@ header {
     opacity: 1;
 }
 
-@media (min-width: 768px) {
 
+@media (min-width: 768px) {
+    .projects-pgs {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .projects-pgs a {
+        color: rgb(76 90 68);
+        font-weight: 600;
+        font-size: 20px;
+    }
+    
+    .projects-pgs a:hover {
+        transform: scale(1.2);
+    }
+    
+    .next::after {
+        content: '\276F';
+        padding-left: 1em;
+    }
+    
+    .previous::before {
+        content: '\276E';
+        padding-right: 1em;
+    }
 }
 
 
 /* IDLE CAFE */
+
+.cafe-logo {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.cafe-logo img {
+    margin-top: 35px;
+}
 
 /* CAROUSEL (codepen creds: Alina Basova) */
 
@@ -886,4 +1018,59 @@ footer a:hover {
     opacity: 0;
     transform: scale(1.2);
     }
+}
+
+
+/* SCROLL-TRIGGERED ANIMATIONS ("REVEALER") */
+
+.revealer * {
+    transition: transform .4s cubic-bezier(0, .5, .5, 1);
+    transition: opacity .4s linear;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.revealer *:nth-child(1) {
+    transition-delay: .2s;
+}
+
+.revealer *:nth-child(2) {
+    transition-delay: .4s;
+}
+
+.revealer *:nth-child(3) {
+    transition-delay: .6s;
+}
+
+.revealer *:nth-child(4) {
+    transition-delay: .8s;
+}
+
+.revealer *:nth-child(5) {
+    transition-delay: .9s;
+}
+
+.revealer *:nth-child(6) {
+    transition-delay: 1s;
+}
+
+.revealer *:nth-child(7) {
+    transition-delay: 1.1s;
+}
+
+.revealer *:nth-child(8) {
+    transition-delay: 1.2s;
+}
+
+.revealer *:nth-child(9) {
+    transition-delay: 1.3s;
+}
+
+.revealer *:nth-child(10) {
+    transition-delay: 1.4s;
+}
+
+.active * {
+    opacity: 1;
+    transform: translateY(0);
 }
