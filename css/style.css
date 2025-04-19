@@ -70,7 +70,7 @@ h4 {
 .sub-h2 {
     font-family: 'Urbanist', sans-serif;
     font-weight: 600;
-    font-size: 26px;
+    font-size: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -533,7 +533,7 @@ header {
     }
     
     .projects-pgs a:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
     
     .next::after {
