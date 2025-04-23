@@ -514,7 +514,6 @@ header {
     opacity: 1;
 }
 
-
 @media (min-width: 768px) {
     .projects-pgs {
         display: flex;
