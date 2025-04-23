@@ -363,11 +363,6 @@ header {
     font-size: 16px;
 }
 
-.projects-hero {
-    margin-top: 50px;
-    height: 215px;
-}
-
 .projects-subhead {
     margin-bottom: 0;
 }
@@ -550,6 +545,15 @@ header {
 
 /* IDLE CAFE */
 
+.idle-hero {
+    margin-top: 50px;
+    height: 205px;
+}
+
+.idle-hero h1 {
+    font-size: 90px;
+}
+
 .cafe-logo {
     margin-top: 20px;
     text-align: center;
@@ -618,6 +622,47 @@ header {
 .item-info {
     text-align: center;
     font-weight: 600;
+}
+
+@media (min-width: 768px) {
+    .idle-hero {
+        margin-top: 50px;
+        height: 215px;
+    }
+    
+    .idle-hero h1 {
+        font-size: 100px;
+    }
+}
+
+/* KA HUE ANAHA MAGAZINE */
+
+.magazine-hero {
+    margin-top: 50px;
+    height: 420px;
+}
+
+.magazine-hero h1 {
+    font-size: 90px;
+}
+
+.magazine-credit {
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 5px;
+    text-align: right;
+    color: rgb(34 34 34 / 0.6);
+}
+
+@media (min-width: 768px) {
+    .magazine-hero {
+        margin-top: 50px;
+        height: 335px;
+    }
+
+    .magazine-hero h1 {
+        font-size: 100px;
+    }
 }
 
 
