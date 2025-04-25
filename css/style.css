@@ -79,6 +79,13 @@ p {
     max-width: 650px;
 }
 
+.grey-caption {
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 5px;
+    color: rgb(34 34 34 / 0.6);
+}
+
 a {
     text-decoration: none;
 }
@@ -634,6 +641,7 @@ header {
     }
 }
 
+
 /* KA HUE ANAHA MAGAZINE */
 
 .magazine-hero {
@@ -660,6 +668,33 @@ header {
     }
 
     .magazine-hero h1 {
+        font-size: 100px;
+    }
+}
+
+
+/* WAQ */
+
+.waq-hero {
+    margin-top: 50px;
+    height: 310px;
+}
+
+.waq-hero h1 {
+    font-size: 90px;
+}
+
+.turtle {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .waq-hero {
+        margin-top: 50px;
+        height: 205px;
+    }
+
+    .waq-hero h1 {
         font-size: 100px;
     }
 }
