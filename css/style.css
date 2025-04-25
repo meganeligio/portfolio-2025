@@ -653,14 +653,6 @@ header {
     font-size: 90px;
 }
 
-.magazine-credit {
-    font-size: 14px;
-    font-style: italic;
-    margin-top: 5px;
-    text-align: right;
-    color: rgb(34 34 34 / 0.6);
-}
-
 @media (min-width: 768px) {
     .magazine-hero {
         margin-top: 50px;
