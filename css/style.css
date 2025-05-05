@@ -126,6 +126,14 @@ img {
 }
 
 
+/* VIDEO */
+
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+
 /* CONTAINER */
 
 .container {
@@ -521,54 +529,6 @@ header {
     opacity: 1;
 }
 
-@media (min-width: 768px) {
-    .projects-pgs {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .projects-pgs a {
-        color: rgb(76 90 68);
-        font-weight: 600;
-        font-size: 20px;
-    }
-    
-    .projects-pgs a:hover {
-        transform: scale(1.1);
-    }
-    
-    .next::after {
-        content: '\276F';
-        padding-left: 1em;
-    }
-    
-    .previous::before {
-        content: '\276E';
-        padding-right: 1em;
-    }
-}
-
-
-/* IDLE CAFE */
-
-.idle-hero {
-    margin-top: 50px;
-    height: 205px;
-}
-
-.idle-hero h1 {
-    font-size: 90px;
-}
-
-.cafe-logo {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.cafe-logo img {
-    margin-top: 35px;
-}
-
 /* CAROUSEL (codepen creds: Alina Basova) */
 
 .carousel-wrapper {
@@ -625,19 +585,30 @@ header {
     right: 0;
 }
 
-.item-info {
-    text-align: center;
-    font-weight: 600;
-}
-
 @media (min-width: 768px) {
-    .idle-hero {
-        margin-top: 50px;
-        height: 215px;
+    .projects-pgs {
+        display: flex;
+        justify-content: space-between;
     }
     
-    .idle-hero h1 {
-        font-size: 100px;
+    .projects-pgs a {
+        color: rgb(76 90 68);
+        font-weight: 600;
+        font-size: 20px;
+    }
+    
+    .projects-pgs a:hover {
+        transform: scale(1.1);
+    }
+    
+    .next::after {
+        content: '\276F';
+        padding-left: 1em;
+    }
+    
+    .previous::before {
+        content: '\276E';
+        padding-right: 1em;
     }
 }
 
@@ -687,6 +658,66 @@ header {
     }
 
     .waq-hero h1 {
+        font-size: 100px;
+    }
+}
+
+
+/* IDLE CAFE */
+
+.idle-hero {
+    margin-top: 50px;
+    height: 205px;
+}
+
+.idle-hero h1 {
+    font-size: 90px;
+}
+
+.cafe-logo {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.cafe-logo img {
+    margin-top: 35px;
+}
+
+.item-info {
+    text-align: center;
+    font-weight: 600;
+}
+
+@media (min-width: 768px) {
+    .idle-hero {
+        margin-top: 50px;
+        height: 215px;
+    }
+    
+    .idle-hero h1 {
+        font-size: 100px;
+    }
+}
+
+
+/* HAIKYUU */
+
+.haikyuu-hero {
+    margin-top: 50px;
+    height: 180px;
+}
+
+.haikyuu-hero h1 {
+    font-size: 70px;
+}
+
+@media (min-width: 768px) {
+    .haikyuu-hero {
+        margin-top: 50px;
+        height: 215px;
+    }
+    
+    .haikyuu-hero h1 {
         font-size: 100px;
     }
 }
