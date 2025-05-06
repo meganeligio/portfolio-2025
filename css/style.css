@@ -735,6 +735,15 @@ header {
 
 /* HELLO STICKERS */
 
+.stickers-hero {
+    margin-top: 50px;
+    height: 265px;
+}
+
+.stickers-hero h1 {
+    font-size: 70px;
+}
+
 .canva {
     position: relative;
     width: 100%;
@@ -756,6 +765,17 @@ header {
     border: none;
     padding: 0;
     margin: 0;
+}
+
+@media (min-width: 768px) {
+    .stickers-hero {
+        margin-top: 50px;
+        height: 215px;
+    }
+
+    .stickers-hero h1 {
+        font-size: 100px;
+    }
 }
 
 
