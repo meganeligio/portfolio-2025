@@ -737,7 +737,7 @@ header {
 
 .stickers-hero {
     margin-top: 50px;
-    height: 265px;
+    height: 180px;
 }
 
 .stickers-hero h1 {
@@ -767,6 +767,10 @@ header {
     margin: 0;
 }
 
+.logo-info {
+    margin-top: 0;
+}
+
 @media (min-width: 768px) {
     .stickers-hero {
         margin-top: 50px;
@@ -775,6 +779,10 @@ header {
 
     .stickers-hero h1 {
         font-size: 100px;
+    }
+
+    .logo-info {
+        margin-top: 10px;
     }
 }
 
