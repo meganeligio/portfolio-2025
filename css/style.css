@@ -463,6 +463,7 @@ header {
     text-align: center;
     font-weight: 600;
     max-width: 1000px;
+    margin-top: 2px;
 }
 
 /* HOVER TEXT (codepen creds: badalsaibo) */
@@ -657,10 +658,6 @@ header {
     font-size: 70px;
 }
 
-.turtle {
-    text-align: center;
-}
-
 @media (min-width: 768px) {
     .waq-hero {
         margin-top: 50px;
@@ -723,6 +720,29 @@ header {
     }
     
     .haikyuu-hero h1 {
+        font-size: 100px;
+    }
+}
+
+
+/* ANI BLITZ */
+
+.blitz-hero {
+    margin-top: 50px;
+    height: 180px;
+}
+
+.blitz-hero h1 {
+    font-size: 70px;
+}
+
+@media (min-width: 768px) {
+    .blitz-hero {
+        margin-top: 50px;
+        height: 215px;
+    }
+    
+    .blitz-hero h1 {
         font-size: 100px;
     }
 }
