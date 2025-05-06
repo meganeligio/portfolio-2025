@@ -209,6 +209,10 @@ header {
     font-size: 35px;
 }
 
+.navbar-toggler {
+    border: none;
+}
+
 /* DROP DOWN MENU (codepen creds: @Mark_Bell00 */
 
 .dropdown {
