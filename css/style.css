@@ -99,21 +99,6 @@ a:hover {
 }
 
 
-/* GRADIENT BG (codepen creds: Colt Steele) */
-
-@keyframes gradient {
-    0% {
-        background-position: 0%;
-    }
-    50% {
-        background-position: 100%;
-    }
-    100% {
-        background-position: 0%;
-    }
-}
-
-
 /* RESPONSIVE IMG */
 
 img {
@@ -484,6 +469,7 @@ header {
     margin-top: 2px;
 }
 
+
 /* HOVER TEXT (codepen creds: badalsaibo) */
 
 .projects-img {
@@ -522,99 +508,76 @@ header {
     left: 20px;
 }
 
-.transparent-box {
-    height: 350px;
-    width: 350px;
-    background-color:rgb(76 90 68 / 0);
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: background-color 0.3s ease;
-}
-
-.projects-box:hover img { 
-    transform: scale(1.1);
-}
-
-.projects-box:hover .transparent-box {
-    background-color:rgb(76 90 68 / 0.4);
-}
-
-.projects-box:hover .caption {
-    transform: translateY(-20px);
-    opacity: 1.0;
-}
-
-.caption > p:nth-child(2) {
-    font-size: 0.8em;
-}
-
-.opacity-low {
-    opacity: 1;
-}
-
-/* CAROUSEL (codepen creds: Alina Basova) */
-
-.carousel-wrapper {
-    width: 100%;
-    height: 350px;
-    overflow: hidden;
-    position: relative;
-}
-
-.carousel-inner {
-    height: 100%;
-    position: relative;
-    padding: 0 0 0 50px;
-    left: 0;
-    margin: 0;
-    transition: all 1s;
-}
-
-.carousel-inner .item {
-    height: 100%;
-    float: left;
-    list-style: none;
-    padding: 0;
-    margin: 0 50px 0 0;
-}
-
-.item-info {
-    text-align: center;
-    font-weight: 600;
-}
-
-.carousel-left,
-.carousel-right {
-    width: 30px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-}
-
-.carousel-left,
-.carousel-right svg {
-    position: absolute;
-    top: 130px;
-    color: rgb(76 90 68);
-}
-
-.carousel-left:before {
-    left: 0;
-}
-.carousel-right:before {
-    right: 0;
-}
-
-.carousel-left {
-    left: 0;
-}
-
-.carousel-right {
-    right: 0;
-}
-
 @media (min-width: 768px) {
+    .projects-title {
+        font-family: 'Urbanist', sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .projects-img img {
+        transform: scale(1.0);
+        transition: transform 0.4s ease;
+    }
+    
+    .projects-box {
+        box-sizing: content-box;
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        border-radius: 5px;
+    }
+    
+    .projects-box a {
+        color: rgb(255 255 255);
+    }
+    
+    .caption {
+        position: absolute;
+        bottom: 50px;
+        left: 20px;
+        opacity: 0.0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    
+    .student .caption {
+        bottom: 120px;
+        left: 20px;
+    }
+    
+    .transparent-box {
+        height: 350px;
+        width: 350px;
+        background-color:rgb(76 90 68 / 0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: background-color 0.3s ease;
+    }
+
+    .projects-box:hover img { 
+        transform: scale(1.1);
+    }
+    
+    .projects-box:hover .transparent-box {
+        background-color:rgb(76 90 68 / 0.4);
+    }
+    
+    .projects-box:hover .caption {
+        transform: translateY(-20px);
+        opacity: 1.0;
+    }
+    
+    .caption > p:nth-child(2) {
+        font-size: 0.8em;
+    }
+    
+    .opacity-low {
+        opacity: 1;
+    }
+    
     .projects-pgs {
         display: flex;
         justify-content: space-between;
@@ -674,6 +637,10 @@ header {
 
 .waq-hero h1 {
     font-size: 70px;
+}
+
+.rotate-card {
+    transform: rotate(180deg);
 }
 
 @media (min-width: 768px) {
@@ -1143,6 +1110,83 @@ footer a:hover {
 }
 
 
+/* CAROUSEL (codepen creds: Alina Basova) */
+
+.carousel-wrapper {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-inner {
+    height: 100%;
+    position: relative;
+    padding: 0 0 0 50px;
+    left: 0;
+    margin: 0;
+    transition: all 1s;
+}
+
+.carousel-inner .item {
+    height: 100%;
+    float: left;
+    list-style: none;
+    padding: 0;
+    margin: 0 50px 0 0;
+}
+
+.item-info {
+    text-align: center;
+    font-weight: 600;
+}
+
+.carousel-left,
+.carousel-right {
+    width: 30px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.carousel-left,
+.carousel-right svg {
+    position: absolute;
+    top: 130px;
+    color: rgb(76 90 68);
+}
+
+.carousel-left:before {
+    left: 0;
+}
+.carousel-right:before {
+    right: 0;
+}
+
+.carousel-left {
+    left: 0;
+}
+
+.carousel-right {
+    right: 0;
+}
+
+
+/* GRADIENT BG (codepen creds: Colt Steele) */
+
+@keyframes gradient {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0%;
+    }
+}
+
+
 /* ANIMATED GRADIENT BORDER (codepen creds: Johnny Fekete) */
 
 .animated-box {
@@ -1156,7 +1200,6 @@ footer a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: 4px;
     background: linear-gradient(120deg, rgb(76 90 68), rgb(241 252 232), rgb(243 202 189));
     background-size: 300% 300%;
     clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), 3px calc(100% - 3px), 3px 100%, 100% 100%, 100% 0%, 0% 0%);
@@ -1175,69 +1218,5 @@ footer a:hover {
     }
     100% {
         background-position: 15% 0%;
-    }
-}
-
-
-/* ANIMATED SPLASH INTRO */
-
-.splash-intro {
-    background: rgb(163 191 141);
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    color: rgb(255 255 255);
-    display: grid;
-    place-items: center;
-    z-index: 1;
-    
-    animation-name: intro-animation;
-    animation-duration: 5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes intro-animation {
-    0% {
-    }
-    80% {
-        transform: translateY(0%);
-    }
-    100% { 
-        transform: translateY(-100%);
-    }
-}
-
-.splash-intro .splash-logo {
-    width: 150px;
-    height: 150px;
-    border: 2px solid rgb(255 255 255);
-    display: grid;
-    place-items: center;
-    border-radius: 100%;
-    
-    animation-name: logo-animation;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes logo-animation {
-    0% {
-        opacity: 0;
-        transform: scale(.8);
-    }
-
-    25% {
-        opacity: 1;
-        transform: scale(1);
-    }
-
-    75% {
-        opacity: 1;
-        transform: scale(1);
-    }
-
-    100% {
-    opacity: 0;
-    transform: scale(1.2);
     }
 }
